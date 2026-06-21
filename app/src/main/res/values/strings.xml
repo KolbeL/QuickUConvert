@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Quick UConvert</string>
+    <!-- Base -->
+    <string name="meter">Meter</string>
+    <string name="second">Second</string>
+    <string name="kilogram">Kilogram</string>
+    <string name="kelvin">Kelvin</string>
+
+    <!-- Length -->
+    <string name="kilometer">Kilometer</string>
+    <string name="centimeter">Centimeter</string>
+    <string name="millimeter">Millimeter</string>
+    <string name="micrometer">Micrometer</string>
+    <string name="nanometer">Nanometer</string>
+    <string name="mile">Mile</string>
+    <string name="yard">Yard</string>
+    <string name="foot">Foot</string>
+    <string name="inch">Inch</string>
+    <string name="thou">Thou</string>
+    <string name="nautical_mile">Nautical Mile</string>
+    <string name="furlong">Furlong</string>
+    <string name="light_year">Light Year</string>
+
+    <!-- Temperature -->
+    <string name="centigrade">Centigrade</string>
+    <string name="fahrenheit">Fahrenheit</string>
+    <string name="rankine">Rankine</string>
+
+    <!--  Area  --> 
+    <!--  Wet Volume  --> 
+    <!--  Dry Volume  --> 
+    <!--  Mass  --> 
+    <!--  Force  -->
+    <string name="newton">Newton</string>
+    <string name="kilogram_force">Kilogram-Force</string>
+    <!--  Moment  --> 
+    <!--  Pressure  --> 
+    <!--  Uniform Load / Stiffness --> 
+    <!--  Speed  --> 
+    <!--  Acceleration  --> 
+    <!--  Stiffness  --> 
+    <!--  Mass Flow  --> 
+    <!--  Vol Flow  --> 
+    <!--  Power  --> 
+    <!--  Energy  --> 
+    <!--  Density  --> 
+</resources>
