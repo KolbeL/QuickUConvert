@@ -89,7 +89,7 @@ All units first convert to SI then to the chosen unit. Conversion errors may com
 
 ### Length
 - [x] inch
-- [ ] rod
+- [x] rod
 - [x] mm
 - [x] km
 - [x] mils (thou)
@@ -99,12 +99,11 @@ All units first convert to SI then to the chosen unit. Conversion errors may com
 - [x] micron (micrometer)
 - [x] yd
 - [x] Nautical mile
-- [ ] dm
-- [ ] angstrom
-- [ ] fathom
-- [ ] league
+- [x] angstrom
+- [x] fathom
+- [x] chain
 - [x] m
-- [ ] furlong
+- [x] furlong
 
 ### Mass
 - [ ] oz

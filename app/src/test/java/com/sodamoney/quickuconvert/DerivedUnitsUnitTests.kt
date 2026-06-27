@@ -66,7 +66,7 @@ class DerivedUnitsUnitTests {
     }
 
     @Test
-    fun converToLightYears() {
+    fun convertToLightYears() {
         val expected = SPEED_OF_LIGHT.toDouble() * 60.0 * 60.0 * 24.0 * 365.25
         val actual = LightYear.convertTo(1.0, Meter)
         assertEquals(expected, actual, 10.0)

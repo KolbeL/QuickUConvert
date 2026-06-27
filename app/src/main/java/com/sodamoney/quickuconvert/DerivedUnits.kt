@@ -46,8 +46,12 @@ val Foot = Units("ft", { it * 0.3048 }, Category.LENGTH)
 val Yard = Units("yd", { it * 0.3048 * 3 }, Category.LENGTH)
 val Mile = Units("mi", { it * 0.3048 * 5_280 }, Category.LENGTH)
 val Thou = Units("mils", { it * 0.0254 / Kilo }, Category.LENGTH)
-val Furlong = Units("fur", { Yard.standardize(it) / 220 }, Category.LENGTH)
-val NauticalMile = Units("NMI", { it / 1852 }, Category.LENGTH)
+val NauticalMile = Units("NM", { it * 1852 }, Category.LENGTH)
+val Fathom = Units("fathom", { Foot.standize(it) * 6}, Category.LENGTH)
+val Rod = Units("rd", { Foot.standardize(it) * 16.5}, Category.LENGTH)
+val Chain = Units("ch", { Rod.standardize(it) * 4}, Category.LENGTH)
+val Furlong = Units("fur", { Mile.standize(it) / 8}, Category.LENGTH)
+val Angstrom = Units("Å", { it / 1E-10 }, Category.LENGTH)	
 val LightYear =
     Units(
         "ly",
@@ -62,12 +66,16 @@ val Lengths = arrayOf(
     Micrometer,
     Nanometer,
     Inch,
+    Thou,
     Foot,
     Yard,
     Mile,
-    Thou,
+    Rod,
+    Chain,
     Furlong,
     NauticalMile,
+    Fathom,
+    Angstrom,
     LightYear
 )
 // endregion
