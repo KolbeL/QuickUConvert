@@ -20,4 +20,6 @@
     <string name="uniform_load">Uniform Load</string>
     <string name="volume">Volume</string>
     <string name="volumetric_flow_rate">Volumetric Flow Rate</string>
+
+    <string name="drop_down_arrow">Drop Down Arrow</string>
 </resources>
