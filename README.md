@@ -80,12 +80,12 @@ All units first convert to SI then to the chosen unit. Conversion errors may com
 
 ### Force
 - [x] N
-- [ ] kN
-- [ ] poundal (1lbm * ft / s^2)
-- [ ] lbf
-- [ ] kips
-- [ ] dyne
-- [ ] kgf
+- [x] kN
+- [x] poundal (1lbm * ft / s^2)
+- [x] lbf
+- [x] kips
+- [x] dyne
+- [x] kgf
 
 ### Length
 - [x] inch
@@ -110,15 +110,16 @@ All units first convert to SI then to the chosen unit. Conversion errors may com
 - [ ] oz
 - [ ] grain
 - [ ] tonne
-- [ ] lbm
+- [x] lbm
 - [ ] mg
 - [ ] stone
 - [ ] ton (short)
 - [ ] ton (long)
 - [ ] g
-- [ ] kg
+- [x] kg
 - [ ] hundredweight (short)
 - [ ] hundredweight (long)
+- [ ] slug
 
 ### Mass Flow rate
 - [ ] lbm/s
@@ -182,7 +183,7 @@ All units first convert to SI then to the chosen unit. Conversion errors may com
 - [ ] ft/min
 - [ ] yd/min
 - [ ] mph
-- [ ] kmph
+- [ ] kph
 - [ ] m/s
 - [ ] m/min
 - [ ] cm/s

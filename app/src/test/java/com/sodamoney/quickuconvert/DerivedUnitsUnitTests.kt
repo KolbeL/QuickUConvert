@@ -54,4 +54,21 @@ class DerivedUnitsUnitTests {
         val actual = Centigrade.convertTo(40.0, Fahrenheit)
         assertEquals(expected, actual, 1E-6)
     }
+
+    @Test
+    fun forceConversion() {
+        var expected = 22.48
+        var actual = Newton.convertTo(100.0, PoundForce)
+        assertEquals(expected, actual, 0.01)
+        expected = 723.3
+        actual = Newton.convertTo(100.0, Poundal)
+        assertEquals(expected, actual, 0.01)
+    }
+
+    @Test
+    fun converToLightYears() {
+        val expected = SPEED_OF_LIGHT.toDouble() * 60.0 * 60.0 * 24.0 * 365.25
+        val actual = LightYear.convertTo(1.0, Meter)
+        assertEquals(expected, actual, 10.0)
+    }
 }

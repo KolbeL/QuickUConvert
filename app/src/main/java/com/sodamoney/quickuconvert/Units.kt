@@ -1,7 +1,5 @@
 package com.sodamoney.quickuconvert
 
-import androidx.annotation.StringRes
-
 open class Units (
     /**
      * Symbol used in equations
@@ -25,10 +23,10 @@ open class Units (
     open fun convertTo(inputValue: Double, other: Units): Double {
         if (this.category != other.category) {
             throw IllegalConversionException(
-                "Can't convert from ${this.name} to ${other.name}. Base units are mismatched ${this.category.baseUnits()} and ${other.category.baseUnits()}"
+                "Can't convert from ${this.symbol} to ${other.symbol}. Base units are mismatched ${this.category.baseUnits()} and ${other.category.baseUnits()}"
             )
         }
-        return 1 / other.standardize(1 / this.standardize(inputValue))
+        return 1.0 / other.standardize(1.0 / this.standardize(inputValue))
     }
 }
 

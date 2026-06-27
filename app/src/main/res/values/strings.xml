@@ -5,7 +5,7 @@
     <string name="acceleration">Acceleration</string>
     <string name="area">Area</string>
     <string name="density">Density</string>
-    <string name="engery">Energy</string>
+    <string name="energy">Energy</string>
     <string name="force">Force</string>
     <string name="length">Length</string>
     <string name="mass">Mass</string>
@@ -16,100 +16,8 @@
     <string name="speed">Speed</string>
     <string name="stiffness">Stiffness</string>
     <string name="temperature">Temperature</string>
+    <string name="time">Time</string>
     <string name="uniform_load">Uniform Load</string>
     <string name="volume">Volume</string>
     <string name="volumetric_flow_rate">Volumetric Flow Rate</string>
-
-    <!-- Base -->
-    <string name="meter">Meter</string>
-    <string name="second">Second</string>
-    <string name="kilogram">Kilogram</string>
-    <string name="kelvin">Kelvin</string>
-
-    <!--  Acceleration  -->
-    <string name="in_per_second_squared">Inch/Second²</string>
-    <string name="ft_per_second_squared">Foot/Second²</string>
-    <string name="meter_per_second_squared">Meter/Second²</string>
-    <string name="cm_per_second_squared">Centimeter/Second²</string>
-    <string name="mm_per_second_squared">Millimeter/Second²</string>
-    <string name="stardard_earth_gravity">Earth Gravity</string>
-
-    <!-- Area -->
-    <string name="square_inch">Square Inch</string>
-    <string name="square_mile">Square Mile</string>
-    <string name="square_kilometer">Square Kilometer</string>
-    <string name="square_foot">Square Foot</string>
-    <string name="square_millimeter">Square Millimeter</string>
-    <string name="square_yard">Square Yard</string>
-    <string name="square_centimeter">Square Centimeter</string>
-    <string name="square_meter">Square Meter</string>
-    <string name="hectare">Hectare</string>
-    <string name="acre">Acre</string>
-
-    <!-- Density -->
-    <string name="pound_per_cu_in">Pound/Inch³</string>
-    <string name="pound_per_cu_ft">Pound/Foot³</string>
-    <string name="pound_per_cu_yd">Pound/Yard³</string>
-    <string name="pound_per_cu_gal">Pound/Gallon³</string>
-    <string name="kilogram_per_cu_m">Kilogram/Meter³</string>
-    <string name="kilogram_per_cu_cm">Kilogram/Centimeter³</string>
-    <string name="Gram_per_cu_cm">Gram/Centimeter³</string>
-    <string name="kilogram_per_liter">Kilogram/Liter</string>
-    <string name="milligram_per_deciliter">Milligram/Deciliter</string>
-    
-    <!-- Energy -->
-
-    <!--  Force  -->
-    <string name="newton">Newton</string>
-    <string name="kilogram_force">Kilogram-Force</string>
-
-    <!-- Length -->
-    <string name="kilometer">Kilometer</string>
-    <string name="centimeter">Centimeter</string>
-    <string name="millimeter">Millimeter</string>
-    <string name="micron">Micrometer</string>
-    <string name="nanometer">Nanometer</string>
-    <string name="mile">Mile</string>
-    <string name="yard">Yard</string>
-    <string name="foot">Foot</string>
-    <string name="inch">Inch</string>
-    <string name="thou">Thousandth of an Inch</string>
-    <string name="nautical_mile">Nautical Mile</string>
-    <string name="furlong">Furlong</string>
-    <string name="light_year">Light-Year</string>
-
-    <!-- Mass -->
-    
-    <!-- Mass Flow -->
-    
-    <!-- Moment -->
-    
-    <!-- Power -->
-    
-    <!-- Pressure -->
-    
-    <!-- Speed -->
-
-    <!-- Stiffness / Uniform Load -->
-
-    <!-- Temperature -->
-    <string name="centigrade">Centigrade</string>
-    <string name="fahrenheit">Fahrenheit</string>
-    <string name="rankine">Rankine</string>
-
-    <!-- Time -->
-    <string name="minute">Minute</string>
-    <string name="hour">Hour</string>
-    <string name="day">Day</string>
-    <string name="year">Year</string>
-    <string name="millisecond">Millisecond</string>
-    <string name="microsecond">Microsecond</string>
-    <string name="nanosecond">Nanosecond</string>
-    <string name="week">Week</string>
-    <string name="month">Month</string>
-    <string name="decade">Decade</string>
-    <string name="century">Century</string>
-
-    <!-- Volume -->
-    <!-- Volumetric Flow -->
 </resources>
