@@ -24,7 +24,6 @@ import androidx.compose.foundation.text.input.setTextAndPlaceCursorAtEnd
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.Icon
-
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
@@ -178,7 +177,10 @@ fun Convert() {
             var onOpen by remember { mutableStateOf(true) }
 
             val allItems = mapOf(
+                Category.ACCELERATION to Accelerations,
+                Category.FORCE to Forces,
                 Category.TEMPERATURE to Temperatures,
+                Category.TIME to Times,
                 Category.LENGTH to Lengths
             )
             val maxCount = allItems.values.maxOf { it.size }

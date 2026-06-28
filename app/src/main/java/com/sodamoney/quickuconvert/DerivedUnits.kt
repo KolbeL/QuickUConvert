@@ -12,7 +12,25 @@ const val Giga = Kilo * Mega
 
 // region Acceleration
 val InchPerSecondSquared =
-    Units("in/s²", { it * Meter.convertTo(EARTH_GRAVITY, Inch) }, Category.ACCELERATION)
+    Units("in/s²", { Meter.convertTo( it, Inch) }, Category.ACCELERATION)
+val FootPerSecondSquared =
+    Units("ft/s²", { Meter.convertTo( it, Foot) }, Category.ACCELERATION)
+val MeterPerSecondSquared =
+    Units("m/s²", { it  }, Category.ACCELERATION)
+val CentimeterPerSecondSquared =
+    Units("cm/s²", { Meter.convertTo( it, Centimeter)  }, Category.ACCELERATION)
+val MillimeterPerSecondSquared =
+    Units("mm/s²", { Meter.convertTo( it, Millimeter)  }, Category.ACCELERATION)
+val EarthGravity =
+    Units("g", { EARTH_GRAVITY * it }, Category.ACCELERATION)
+val Accelerations = arrayOf(
+        EarthGravity,
+        MeterPerSecondSquared,
+        CentimeterPerSecondSquared,
+        MillimeterPerSecondSquared,
+        InchPerSecondSquared,
+        FootPerSecondSquared
+    )
 // endregion
 
 // region Forces
@@ -30,8 +48,17 @@ val PoundForce =
 val Kips = Units("kip", { PoundForce.standardize(it) * Kilo }, Category.FORCE)
 val Poundal = Units(
     "pdl",
-    { PoundForce.standardize(it) / Meter.convertTo(EARTH_GRAVITY, Foot) },
+    { PoundForce.standardize(it) / FootPerSecondSquared.standardize(1.0) },
     Category.FORCE
+)
+val Forces = arrayOf(
+    Newton,
+    Kilonewton,
+    KilogramForce,
+    Dyne,
+    PoundForce,
+    Kips,
+    Poundal
 )
 // endregion
 
@@ -47,10 +74,10 @@ val Yard = Units("yd", { it * 0.3048 * 3 }, Category.LENGTH)
 val Mile = Units("mi", { it * 0.3048 * 5_280 }, Category.LENGTH)
 val Thou = Units("mils", { it * 0.0254 / Kilo }, Category.LENGTH)
 val NauticalMile = Units("NM", { it * 1852 }, Category.LENGTH)
-val Fathom = Units("fathom", { Foot.standize(it) * 6}, Category.LENGTH)
+val Fathom = Units("fathom", { Foot.standardize(it) * 6}, Category.LENGTH)
 val Rod = Units("rd", { Foot.standardize(it) * 16.5}, Category.LENGTH)
 val Chain = Units("ch", { Rod.standardize(it) * 4}, Category.LENGTH)
-val Furlong = Units("fur", { Mile.standize(it) / 8}, Category.LENGTH)
+val Furlong = Units("fur", { Mile.standardize(it) / 8}, Category.LENGTH)
 val Angstrom = Units("Å", { it / 1E-10 }, Category.LENGTH)	
 val LightYear =
     Units(
@@ -122,4 +149,18 @@ val Week = Units("wk", { Day.standardize(it) * 7 }, Category.TIME)
 val Month = Units("mo", { Year.standardize(it) / 12 }, Category.TIME)
 val Decade = Units("dec", { Year.standardize(it) * 10 }, Category.TIME)
 val Century = Units("cen", { Year.standardize(it) * 100 }, Category.TIME)
+val Times = arrayOf(
+    Nanosecond,
+    Microsecond,
+    Millisecond,
+    Second,
+    Minute,
+    Hour,
+    Day,
+    Week,
+    Month,
+    Year,
+    Decade,
+    Century
+)
 // endregion

@@ -35,12 +35,12 @@ Equivalent Units Notes:
 All units first convert to SI then to the chosen unit. Conversion errors may compound.
 
 ### Acceleration
-- [ ] in/s^2
-- [ ] ft/s^2
-- [ ] m/s^2
-- [ ] cm/s^2
-- [ ] mm/s^2
-- [ ] g
+- [x] in/s^2
+- [x] ft/s^2
+- [x] m/s^2
+- [x] cm/s^2
+- [x] mm/s^2
+- [x] g
 
 ### Area
 - [ ] sq in
