@@ -1,10 +1,10 @@
 # Issues to fix
-1 Some conversions are crashing the app (looking at you accelerations)
-2 Add unit test for every unit to the base unit
-3 Add remaining other units
-4 Fix UI so it doesn't look like 💩
-5 Figure out how to make it not full screen
-6 Auto layout for landscape / portrait / wider screens
+1. Some conversions are crashing the app (looking at you accelerations)
+1. Add unit test for every unit to the base unit
+1. Add remaining other units
+1. Fix UI so it doesn't look like 💩
+1. Figure out how to make it not full screen
+1. Auto layout for landscape / portrait / wider screens
 
 # Units to add
 ### Acceleration
