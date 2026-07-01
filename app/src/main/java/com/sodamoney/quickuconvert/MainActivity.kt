@@ -29,6 +29,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.ContentCopy
 import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.HorizontalDivider
@@ -50,8 +52,10 @@ import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -216,7 +220,12 @@ fun UnitCard(
 ) {
     val focusRequester = remember { FocusRequester() }
     val clipboardManager = LocalClipboardManager.current
+    val keyboardController = LocalSoftwareKeyboardController.current
     var copied by remember { mutableStateOf(false) }
+    var isFocused by remember { mutableStateOf(false) }
+    var savedText by remember { mutableStateOf("") }
+
+    val primaryColor = MaterialTheme.colorScheme.primary
 
     LaunchedEffect(copied) {
         if (copied) {
@@ -225,7 +234,17 @@ fun UnitCard(
         }
     }
 
-    Column(modifier = modifier) {
+    Card(
+        modifier = modifier.shadow(
+            elevation = if (isFocused) 6.dp else 2.dp,
+            shape = RoundedCornerShape(12.dp),
+            ambientColor = if (isFocused) primaryColor.copy(alpha = 0.5f) else Color.Black,
+            spotColor = if (isFocused) primaryColor.copy(alpha = 0.9f) else Color.Black
+        ),
+        shape = RoundedCornerShape(12.dp),
+        elevation = CardDefaults.cardElevation(defaultElevation = 0.dp),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceContainerHigh)
+    ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -239,7 +258,10 @@ fun UnitCard(
                     keyboardType = KeyboardType.Number,
                     imeAction = ImeAction.Done
                 ),
-                onKeyboardAction = { onUpdate() },
+                onKeyboardAction = {
+                    onUpdate()
+                    keyboardController?.hide()
+                },
                 lineLimits = TextFieldLineLimits.SingleLine,
                 textStyle = MaterialTheme.typography.titleMedium.copy(
                     color = MaterialTheme.colorScheme.onSurface
@@ -247,7 +269,24 @@ fun UnitCard(
                 modifier = Modifier
                     .weight(1f)
                     .focusRequester(focusRequester)
-                    .onFocusChanged { if (it.isFocused) state.clearText() }
+                    .onFocusChanged { focusState ->
+                        val gaining = !isFocused && focusState.isFocused
+                        val losing = isFocused && !focusState.isFocused
+                        isFocused = focusState.isFocused
+                        when {
+                            gaining -> {
+                                savedText = state.text.toString()
+                                state.clearText()
+                            }
+                            losing -> {
+                                if (state.text.isEmpty()) {
+                                    state.setTextAndPlaceCursorAtEnd(savedText)
+                                } else {
+                                    onUpdate()
+                                }
+                            }
+                        }
+                    }
             )
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
@@ -275,10 +314,6 @@ fun UnitCard(
                 }
             }
         }
-        HorizontalDivider(
-            thickness = 1.dp,
-            color = MaterialTheme.colorScheme.outlineVariant
-        )
     }
 }
 
