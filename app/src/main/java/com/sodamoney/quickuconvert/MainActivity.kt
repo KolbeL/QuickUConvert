@@ -53,6 +53,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -101,7 +102,7 @@ fun Convert() {
     var themeMode by remember { mutableStateOf(repo.themeMode) }
     var settingsOpen by remember { mutableStateOf(false) }
     var showIntro by remember { mutableStateOf(!repo.hasSeenIntro) }
-    var category by remember { mutableStateOf(Category.LENGTH) }
+    var category by rememberSaveable { mutableStateOf(Category.LENGTH) }
 
     val maxCount = AllUnits.values.maxOf { it.size }
     val states = Array(maxCount) { rememberTextFieldState("") }
